@@ -52,7 +52,8 @@ module.exports = {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './public/index.html',
+      favicon: './public/favicon.ico'
     }),
     new Dotenv()
   ],
@@ -89,6 +90,6 @@ module.exports = {
     static: path.join(__dirname, './dist'),
     compress: true,
     historyApiFallback: true,
-    port: 4000
+    port: 8080
   }
 };
